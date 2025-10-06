@@ -1,0 +1,18 @@
+Donald Duck
+don@ld.com
+1313 Webfoot Street
+Duckburg
+01234/313
+
+Scrooge McDuck
+scrooge.mcduck@aol.com
+The Money Bin, Killmotor Hill
+Duckburg
+0190/123456
+
+Mickey Mouse
+mouse@mickeymouse.com
+Mouseton
+
+Gyro Gearloose
+gyro@duckburg.com

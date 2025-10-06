@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+  Details for Article {{ article.id }}
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="headline">
+      <div class="title">{{ article.title|escape }}</div>
+      <div class="timestamp">{{ article.timestamp }}</div>
+      <div style="clear: both"></div>
+    </div>
+    <div class="text">
+      {{ article.text|escape|linebreaksbr }}
+    </div>
+  </div>
+  <div class="container">
+    <div class="headline">Comments</div>
+    {% if article.comment_set.count %}
+      <table>
+      {% for c in article.comment_set.all %}
+        <tr class="comment_line">
+          <td class="column_header">{{ c.author }}:</td>
+          <td>{{ c.text|escape|linebreaksbr }}</td>
+        </tr>
+      {% endfor %}
+      </table>
+    {% else %}
+      No comments
+    {% endif %}
+  </div>
+  <div class="link_bottom">
+    <a href="{% url 'news:articles' %}">Back</a>
+  </div>
+{% endblock %}
