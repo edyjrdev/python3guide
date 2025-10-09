@@ -13,7 +13,10 @@ while True:
         print('Sem fatorial para calcular.')    
         break
     else:
-        numero = int(resposta)
+        numero = int(resposta) #TODO: tratamento de erro de conversão
+        if numero < 0:
+            print('Numero negativo não permitido.')
+            continue
     fatorial = 1
 
     #calcular fatorial
